@@ -20,7 +20,7 @@ const Subheading = tw.span`uppercase tracking-wider text-sm`;
 export default () => {
   return (
     <AnimationRevealPage>
-      <Header />
+      {/* <Header /> */}
       <MainFeature1
         subheading={<Subheading>About Treact</Subheading>}
         heading="We are a modern design agency."

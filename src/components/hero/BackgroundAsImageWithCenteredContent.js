@@ -62,7 +62,7 @@ export default () => {
     <Container>
       <OpacityOverlay />
       <HeroContainer>
-        <StyledHeader links={navLinks} />
+        {/* <StyledHeader links={navLinks} /> */}
         <Content>
           <Heading>
               Book Music & Comedy Events

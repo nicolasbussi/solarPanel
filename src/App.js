@@ -100,30 +100,74 @@ import { css } from "styled-components/macro"; //eslint-disable-line
 // import TermsOfServicePage from "pages/TermsOfService.js";
 // import PrivacyPolicyPage from "pages/PrivacyPolicy.js";
 
-import ComponentRenderer from "ComponentRenderer.js";
+// import ComponentRenderer from "ComponentRenderer.js";
 import MainLandingPage from "MainLandingPage.js";
-import ThankYouPage from "ThankYouPage.js";
+import ServiceLandingPage from "demos/ServiceLandingPage.js";
+import ContactUsPage from "pages/ContactUs.js";
+import AboutUsPage from "pages/AboutUs.js";
+import FinancingPage from "pages/Financing.js";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+
+import tw from "twin.macro";
+import styled from "styled-components";
+import Header, { NavLinks, LogoLink,  NavLink as NavLinkBase} from "./components/headers/light.js";
 
 export default function App() {
   // If you want to disable the animation just use the disabled `prop` like below on your page's component
   // return <AnimationRevealPage disabled>xxxxxxxxxx</AnimationRevealPage>;
+  const StyledHeader = styled(Header)`
+  ${tw`justify-between`}
+  ${LogoLink} {
+    ${tw`mr-8 pb-0`}
+  }
+`;
+
+const NavLink = tw(NavLinkBase)`
+  sm:text-sm sm:mx-6
+`;
+  const navLinks = [
+    <NavLinks key={1}>
+      <NavLink href="/about-us">
+        About US
+      </NavLink>
+      <NavLink href="/services">
+        Services
+      </NavLink>
+      <NavLink href="/contact">
+        Contact
+      </NavLink>
+      <NavLink href="/financing">
+        Financing
+      </NavLink>
+    </NavLinks>,
+  ];
 
 
   return (
     <>
       <GlobalStyles />
+  
+
+      <StyledHeader links={navLinks} />
       <Router>
         <Routes>
-          <Route path="/components/:type/:subtype/:name" element={<ComponentRenderer />} />
+          {/* <Route path="/components/:type/:subtype/:name" element={<ComponentRenderer />} />
           <Route path="/components/:type/:name" element={<ComponentRenderer />} />
-          <Route path="/thank-you" element={<ThankYouPage />} />
+          // <Route path="/thank-you" element={<ThankYouPage />} /> */}
+          <Route path="/about-us" element={<AboutUsPage />} />
+           <Route path="/services" element={<ServiceLandingPage />} />
+           <Route path="/contact" element={<ContactUsPage />} />
+           <Route path="/financing" element={<FinancingPage />} />
           <Route path="/" element={<MainLandingPage />} />
         </Routes>
       </Router>
     </>
   );
+
+
+
 }
 
 // export default EventLandingPage;
