@@ -5,7 +5,7 @@ import { css } from "styled-components/macro"; //eslint-disable-line
 import { SectionHeading, Subheading as SubheadingBase } from "../../components/misc/Headings.js";
 import TeamIllustrationSrc from "../../images/team-illustration-2.svg";
 import { ReactComponent as SvgDotPattern } from "../../images/dot-pattern.svg";
-
+import { PrimaryButton as PrimaryButtonBase } from "../../components/misc/Buttons.js";
 const Container = tw.div`relative`;
 const TwoColumn = tw.div`flex flex-col md:flex-row justify-between max-w-screen-xl mx-auto py-20 md:py-24 items-center`;
 const Column = tw.div`w-full max-w-md mx-auto md:max-w-none md:mx-0`;
@@ -56,19 +56,31 @@ export default ({
   decoratorBlobCss = null,
 }) => {
   // The textOnLeft boolean prop can be used to display either the text on left or right side of the image.
+  const PrimaryButton = styled(PrimaryButtonBase)(props => [
+    tw`mt-8 md:mt-8 text-sm inline-block mx-auto md:mx-0`,
+    props.buttonRounded && tw`rounded-full`
+  ]);
 
   const defaultSteps = [
     {
-      heading: "Register",
-      description: "Create an account with us using Google or Facebook."
+      heading: "Create your own power",
+      description: ""
     },
     {
-      heading: "Download",
-      description: "Browse and Download the template that you like from the marketplace."
+      heading: "Flexible payment options",
+      description: ""
     },
     {
-      heading: "Run",
-      description: "Follow the instructions to setup and customize the template to your needs."
+      heading: "Increase your home value",
+      description: ""
+    },
+    {
+      heading: "25 years system protection",
+      description: ""
+    },
+    {
+      heading: "24/7 monitoring + protection",
+      description: ""
     }
   ];
 
@@ -85,7 +97,7 @@ export default ({
           <TextContent>
             <Subheading>{subheading}</Subheading>
             <Heading>{heading}</Heading>
-            <Steps>
+            {/* <Steps>
               {steps.map((step, index) => (
                 <Step key={index}>
                   <StepNumber>{(index+1).toString().padStart(2,'0')}</StepNumber>
@@ -95,7 +107,10 @@ export default ({
                   </StepText>
                 </Step>
               ))}
-            </Steps>
+            </Steps> */}
+            <PrimaryButton buttonRounded={true} as="a" href={''}>
+              {'Talk to an expert'}
+            </PrimaryButton>
           </TextContent>
         </TextColumn>
       </TwoColumn>

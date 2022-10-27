@@ -7,7 +7,7 @@ import { css } from "styled-components/macro";
 import Header from "../headers/light.js";
 
 import { ReactComponent as SvgDecoratorBlob1 } from "../../images/svg-decorator-blob-1.svg";
-import DesignIllustration from "../../images/design-illustration-2.svg";
+import DesignIllustration from "../../images/solar-panel-house.jpg";
 import CustomersLogoStripImage from "../../images/customers-logo-strip.png";
 
 const Container = tw.div`relative`;
@@ -59,14 +59,14 @@ export default ({ roundedHeaderButton }) => {
               Our templates are easy to setup, understand and customize. Fully modular components with a variety of
               pages and components.
             </Paragraph>
-            <Actions>
+            {/* <Actions>
               <input type="text" placeholder="Your E-mail Address" />
               <button>Get Started</button>
-            </Actions>
-            <CustomersLogoStrip>
+            </Actions> */}
+            {/* <CustomersLogoStrip>
               <p>Our TRUSTED Customers</p>
               <img src={CustomersLogoStripImage} alt="Our Customers" />
-            </CustomersLogoStrip>
+            </CustomersLogoStrip> */}
           </LeftColumn>
           <RightColumn>
             <IllustrationContainer>

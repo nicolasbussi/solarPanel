@@ -44,11 +44,11 @@ export default ({
   subheading = "Our Expertise",
   heading = (
     <>
-      Designed & Developed by <span tw="text-primary-500">Professionals.</span>
+      Summer around the corner means extra sun, high electric bills & huge savings.<span tw="text-primary-500">Go Solar.</span>
     </>
   ),
-  description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-  primaryButtonText = "Learn More",
+  description = "Let our solar energy specialists show you how easy and affordable switching to solar is.",
+  primaryButtonText = "Start now",
   primaryButtonUrl = "https://timerse.com",
   imageSrc = TeamIllustrationSrc,
   buttonRounded = true,
