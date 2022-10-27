@@ -44,4 +44,8 @@ export const menuItems = [
     title: 'Contact',
     url: '/contact',
   },
+  {
+    title: 'FAQS',
+    url: '/faqs',
+  },
 ];

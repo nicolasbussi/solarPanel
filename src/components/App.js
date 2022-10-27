@@ -2,6 +2,7 @@ import { Routes, Route } from 'react-router-dom';
 import Home from '../routes/Home';
 import AboutUs from '../routes/AboutUs';
 import Contact from '../routes/Contact';
+import Faqs from '../routes/Faqs';
 import Layout from './Layout';
 import GlobalStyles from '../styles/GlobalStyles';
 
@@ -14,6 +15,7 @@ const App = () => {
           <Route index element={<Home />} />
           <Route path="about-us" element={<AboutUs />} />
           <Route path="contact" element={<Contact />} />
+          <Route path="faqs" element={<Faqs />} />
           {/* <Route path="services" element={<Services />} />
           <Route path="web-design" element={<WebDesign />} />
           <Route path="web-dev" element={<WebDev />} />
