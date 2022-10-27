@@ -40,7 +40,7 @@ import ContactUsPageImageSrc from "images/demo/ContactUsPage.jpeg";
 // import BackgroundAsImageHero from "components/hero/BackgroundAsImage.js";
 // import IllustrationAndVideoHero from "components/hero/TwoColumnWithVideo.js";
 // import IllustrationAndInputHero from "components/hero/TwoColumnWithInput.js";
-// import FeaturesAndTestimonialHero from "components/hero/TwoColumnWithFeaturesAndTestimonial.js";
+import FeaturesAndTestimonialHero from "components/hero/TwoColumnWithFeaturesAndTestimonial.js";
 // import FullWidthWithImageHero from "components/hero/FullWidthWithImage.js";
 import BackgroundAsImageWithCenteredContentHero from "components/hero/BackgroundAsImageWithCenteredContent.js";
 // import IllustrationAndPrimaryBackgroundHero from "components/hero/TwoColumnWithPrimaryBackground.js";
@@ -86,7 +86,7 @@ import WithStatsAndImage2Features from "components/features/TwoColSingleFeatureW
 
 // import SimpleContactUsForm from "components/forms/SimpleContactUs.js";
 // import SimpleSubscribeNewsletterForm from "components/forms/SimpleSubscribeNewsletter.js";
-// import TwoColContactUsForm from "components/forms/TwoColContactUsWithIllustration.js";
+import TwoColContactUsForm from "components/forms/TwoColContactUsWithIllustration.js";
 import TwoColContactUsFullForm from "components/forms/TwoColContactUsWithIllustrationFullForm.js";
 
 // import GetStartedCTA from "components/cta/GetStarted.js";
@@ -203,11 +203,11 @@ export const components = {
     //       component: IllustrationAndVideoHero,
     //       url: "/components/blocks/Hero/IllustrationAndVideo",
     //     },
-    //     FeaturesAndTestimonial: {
-    //       name: "With Features And Customer Testimonial",
-    //       component: FeaturesAndTestimonialHero,
-    //       url: "/components/blocks/Hero/FeaturesAndTestimonial",
-    //     },
+        FeaturesAndTestimonial: {
+          name: "With Features And Customer Testimonial",
+          component: FeaturesAndTestimonialHero,
+          url: "/components/blocks/Hero/FeaturesAndTestimonial",
+        },
     //     FullWidthWithImage: {
     //       name: "Full Width With Image",
     //       component: FullWidthWithImageHero,
@@ -428,21 +428,21 @@ export const components = {
     Form: {
       type: "Forms Section",
       elements: {
-    //     SimpleContactUs: {
-    //       name: "Simple Contact Us",
-    //       component: SimpleContactUsForm,
-    //       url: "/components/blocks/Form/SimpleContactUs",
-    //     },
-    //     SimpleSubscribeNewsletter: {
-    //       name: "Simple Subscribe newsletter",
-    //       component: SimpleSubscribeNewsletterForm,
-    //       url: "/components/blocks/Form/SimpleSubscribeNewsletter",
-    //     },
-    //     TwoColContactUs: {
-    //       name: "Two Column Contact Us",
-    //       component: TwoColContactUsForm,
-    //       url: "/components/blocks/Form/TwoColContactUs",
-    //     },
+        SimpleContactUs: {
+          name: "Simple Contact Us",
+          component: SimpleContactUsForm,
+          url: "/components/blocks/Form/SimpleContactUs",
+        },
+        SimpleSubscribeNewsletter: {
+          name: "Simple Subscribe newsletter",
+          component: SimpleSubscribeNewsletterForm,
+          url: "/components/blocks/Form/SimpleSubscribeNewsletter",
+        },
+        TwoColContactUs: {
+          name: "Two Column Contact Us",
+          component: TwoColContactUsForm,
+          url: "/components/blocks/Form/TwoColContactUs",
+        },
         TwoColContactUsFull: {
           name: "Two Column Contact Us - Full Form",
           component: TwoColContactUsFullForm,

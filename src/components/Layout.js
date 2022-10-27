@@ -1,5 +1,6 @@
 import { Outlet } from 'react-router-dom';
 import Header from './Header';
+import MiniCenteredFooter from "../components/footers/MiniCenteredFooter.js";
 
 const Layout = () => {
   return (
@@ -8,6 +9,7 @@ const Layout = () => {
       <div className="content">
         <Outlet />
       </div>
+      <MiniCenteredFooter>  </MiniCenteredFooter> 
     </div>
   );
 };
