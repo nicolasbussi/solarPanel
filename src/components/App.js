@@ -1,16 +1,8 @@
 import { Routes, Route } from 'react-router-dom';
 import Home from '../routes/Home';
-import About from '../routes/About';
-import WebDesign from '../routes/WebDesign';
-import SEO from '../routes/SEO';
-import Services from '../routes/Services';
+import AboutUs from '../routes/AboutUs';
+import Contact from '../routes/Contact';
 import Layout from './Layout';
-import Frontend from '../routes/Frontend';
-import PHP from '../routes/PHP';
-import Node from '../routes/Node';
-import AboutWho from '../routes/AboutWho';
-import OurValues from '../routes/OurValues';
-import WebDev from '../routes/WebDev';
 import GlobalStyles from '../styles/GlobalStyles';
 
 const App = () => {
@@ -20,8 +12,9 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path="about" element={<About />} />
-          <Route path="services" element={<Services />} />
+          <Route path="about-us" element={<AboutUs />} />
+          <Route path="contact" element={<Contact />} />
+          {/* <Route path="services" element={<Services />} />
           <Route path="web-design" element={<WebDesign />} />
           <Route path="web-dev" element={<WebDev />} />
           <Route path="frontend" element={<Frontend />} />
@@ -29,7 +22,7 @@ const App = () => {
           <Route path="seo" element={<SEO />} />
           <Route path="php" element={<PHP />} />
           <Route path="who-we-are" element={<AboutWho />} />
-          <Route path="our-values" element={<OurValues />} />
+          <Route path="our-values" element={<OurValues />} /> */}
           <Route path="*" element={<p>Not found!</p>} />
         </Route>
       </Routes>
