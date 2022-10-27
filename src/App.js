@@ -1,5 +1,6 @@
 import React from "react";
 import GlobalStyles from 'styles/GlobalStyles';
+import MiniCenteredFooter from "components/footers/MiniCenteredFooter.js";
 import { css } from "styled-components/macro"; //eslint-disable-line
 
 /*
@@ -163,6 +164,7 @@ const NavLink = tw(NavLinkBase)`
           <Route path="/" element={<MainLandingPage />} />
         </Routes>
       </Router>
+      <MiniCenteredFooter>  </MiniCenteredFooter>
     </>
   );
 

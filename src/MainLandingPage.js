@@ -6,11 +6,64 @@ import BackgroundAsImageWithCenteredContentHero from "components/hero/Background
 import TwoColContactUsFullForm from "components/forms/TwoColContactUsWithIllustrationFullForm.js";
 import ThreeColSimpleFeatures from "components/features/ThreeColSimple.js";
 import WithStatsAndImage2Features from "components/features/TwoColSingleFeatureWithStats2.js";
-import MiniCenteredFooter from "components/footers/MiniCenteredFooter.js";
 
+import SupportIconImage from "images/support-icon.svg";
+import ShieldIconImage from "images/shield-icon.svg";
+import CustomizeIconImage from "images/customize-icon.svg";
 
 
 export default ({
+  threeCards  = [
+    {
+      imageSrc: ShieldIconImage,
+      title: "Zero Dollars Down",
+      description: "",
+      url: "https://timerse.com"
+    },
+    {
+      imageSrc: SupportIconImage,
+      title: "No Payments Until Next Year",
+      description: "",
+      url: "https://google.com"
+    },
+    {
+      imageSrc: CustomizeIconImage,
+      title: "Approval Based On Home Equity",
+      description: "",
+      url: "https://reddit.com"
+    }],
+  fiveCards = [
+    {
+      imageSrc: ShieldIconImage,
+      title: "Zero Dollars Down",
+      description: "",
+      url: "https://timerse.com"
+    },
+    {
+      imageSrc: SupportIconImage,
+      title: "No Payments Until Next Year",
+      description: "",
+      url: "https://google.com"
+    },
+    {
+      imageSrc: CustomizeIconImage,
+      title: "Approval Based On Home Equity",
+      description: "",
+      url: "https://reddit.com"
+    },
+    {
+      imageSrc: CustomizeIconImage,
+      title: "No Minimum Credit Score Required",
+      description: "",
+      url: "https://reddit.com"
+    },
+    {
+      imageSrc: CustomizeIconImage,
+      title: "Get Qualified in Minutes",
+      description: "",
+      url: "https://reddit.com"
+    }
+  ],
   features = null,
   landingPages = components.landingPages,
   innerPages = components.innerPages,
@@ -34,10 +87,10 @@ export default ({
 
           <BackgroundAsImageWithCenteredContentHero></BackgroundAsImageWithCenteredContentHero>
           <TwoColContactUsFullForm></TwoColContactUsFullForm>
-          <ThreeColSimpleFeatures></ThreeColSimpleFeatures>
+          <ThreeColSimpleFeatures cards={fiveCards}/>
           <WithStatsAndImage2Features>  </WithStatsAndImage2Features>
-          <ThreeColSimpleFeatures>  </ThreeColSimpleFeatures>
-          <MiniCenteredFooter>  </MiniCenteredFooter>
+          <ThreeColSimpleFeatures cards={threeCards}/>
+         
 
         {/* </Content2Xl> */}
       </Container>

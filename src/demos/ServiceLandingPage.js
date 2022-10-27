@@ -42,7 +42,6 @@ export default () => {
         heading={<>We love <HighlightedText>Writing</HighlightedText></>}
       />
       <GetStarted/>
-      <Footer />
     </AnimationRevealPage>
   );
 }

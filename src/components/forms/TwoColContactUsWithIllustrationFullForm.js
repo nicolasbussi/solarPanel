@@ -37,7 +37,7 @@ export default ({
   subheading = "Contact Us",
   heading = <>Feel free to <span tw="text-primary-500">get in touch</span><wbr/> with us.</>,
   description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-  submitButtonText = "Send",
+  submitButtonText = "Submit",
   formAction = "#",
   formMethod = "get",
   textOnLeft = true,
@@ -54,12 +54,14 @@ export default ({
           <TextContent>
             {subheading && <Subheading>{subheading}</Subheading>}
             <Heading>{heading}</Heading>
-            {description && <Description>{description}</Description>}
+            
             <Form action={formAction} method={formMethod}>
+              <Input type="address" name="address" placeholder="Property Address" />
               <Input type="email" name="email" placeholder="Your Email Address" />
+              <Input type="phone" name="phone" placeholder="Phone" />
+              
+              <Textarea name="message" placeholder="Home improvement needed" />
               <Input type="text" name="name" placeholder="Full Name" />
-              <Input type="text" name="subject" placeholder="Subject" />
-              <Textarea name="message" placeholder="Your Message Here" />
               <SubmitButton type="submit">{submitButtonText}</SubmitButton>
             </Form>
           </TextContent>

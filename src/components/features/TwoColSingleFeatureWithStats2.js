@@ -4,9 +4,9 @@ import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
 import { SectionHeading, Subheading as SubheadingBase } from "components/misc/Headings.js";
 import { PrimaryButton as PrimaryButtonBase } from "components/misc/Buttons.js";
-import StatsIllustrationSrc from "images/stats-illustration.svg";
+import StatsIllustrationSrc from "images/save_energy.svg";
 import { ReactComponent as SvgDotPattern } from "images/dot-pattern.svg";
-
+import { ReactComponent as ArrowRightIcon } from "images/arrow-right-icon.svg";
 const Container = tw.div`relative`;
 const TwoColumn = tw.div`flex flex-col md:flex-row justify-between max-w-screen-xl mx-auto py-20 md:py-24`;
 const Column = tw.div`w-full max-w-md mx-auto md:max-w-none md:mx-0`;
@@ -38,16 +38,41 @@ const PrimaryButton = tw(PrimaryButtonBase)`mt-8 md:mt-10 text-sm inline-block m
 const DecoratorBlob = styled(SvgDotPattern)(props => [
   tw`w-20 h-20 absolute right-0 bottom-0 transform translate-x-1/2 translate-y-1/2 fill-current text-primary-500 -z-10`
 ]);
+const Card = styled.a`
+  ${tw`flex flex-col items-center text-center h-full mx-4 px-4 py-8 rounded transition-transform duration-300 hover:cursor-pointer transform hover:scale-105 `}
+  .imageContainer {
+    ${tw`text-center rounded-full p-4 bg-gray-100`}
+    img {
+      ${tw`w-8 h-8`}
+    }
+  }
 
+  .title {
+    ${tw`mt-4 font-bold text-xl leading-none`}
+  }
+
+  .description {
+    ${tw`mt-4 text-sm font-medium text-secondary-300`}
+  }
+
+  .link {
+    ${tw`mt-auto inline-flex items-center pt-5 text-sm font-bold text-primary-300 leading-none hocus:text-primary-900 transition duration-300`}
+    .icon {
+      ${tw`ml-2 w-4`}
+    }
+  }
+`;
 export default ({
   subheading = "Our Track Record",
   heading = (
     <>
-      We have been doing this <wbr /> since <span tw="text-primary-500">1999.</span>
+      Start your home improvements today. <wbr /> <span tw="text-primary-500">$0 down. 100% financing.</span>
+      <span>No payments until next year.</span>
     </>
   ),
-  description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-  primaryButtonText = "Learn More",
+  linkText = "Learn More",
+  description = "Schedule Your Free Energy Consultation Today!",
+  primaryButtonText = "Book Now",
   primaryButtonUrl = "https://timerse.com",
   imageSrc = StatsIllustrationSrc,
   imageCss = null,
@@ -78,6 +103,7 @@ export default ({
   if (!statistics) statistics = defaultStatistics;
 
   return (
+    <>
     <Container>
       <TwoColumn css={!imageInsideDiv && tw`md:items-center`}>
         <ImageColumn css={imageContainerCss}>
@@ -86,17 +112,18 @@ export default ({
         </ImageColumn>
         <TextColumn textOnLeft={textOnLeft}>
           <TextContent>
-            {subheading && <Subheading>{subheading}</Subheading>}
+            
             <Heading>{heading}</Heading>
             <Description>{description}</Description>
-            <Statistics>
-              {statistics.map((statistic, index) => (
-                <Statistic key={index}>
-                  <Value>{statistic.value}</Value>
-                  <Key>{statistic.key}</Key>
-                </Statistic>
-              ))}
-            </Statistics>
+            <Card href={''}>
+                
+                {linkText && (
+                  <span className="link">
+                    <span>{linkText}</span>
+                    <ArrowRightIcon className="icon" />
+                  </span>
+                )}
+              </Card>
             <PrimaryButton as="a" href={primaryButtonUrl}>
               {primaryButtonText}
             </PrimaryButton>
@@ -104,5 +131,6 @@ export default ({
         </TextColumn>
       </TwoColumn>
     </Container>
+    </>
   );
 };

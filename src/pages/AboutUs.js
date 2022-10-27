@@ -62,7 +62,7 @@ export default () => {
       <TeamCardGrid 
         subheading={<Subheading>Our Team</Subheading>}
       />
-      <Footer />
+   
     </AnimationRevealPage>
   );
 };
