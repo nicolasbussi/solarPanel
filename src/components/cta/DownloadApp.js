@@ -5,7 +5,7 @@ import { css } from "styled-components/macro"; //eslint-disable-line
 import mockupImageSrc from "images/app-mockup.png"
 import { ReactComponent as SvgDecoratorBlob1 } from "images/svg-decorator-blob-9.svg";
 import { ContentWithPaddingXl, Container as ContainerBase } from "components/misc/Layouts";
-import { SectionHeading, Subheading as SubheadingBase } from "components/misc/Headings.js";
+import { SectionHeading, Subheading as SubheadingBase } from "../../components/misc/Headings.js";
 import appleIconImageSrc from "images/apple-icon.png";
 import googlePlayIconImageSrc from "images/google-play-icon.png"
 

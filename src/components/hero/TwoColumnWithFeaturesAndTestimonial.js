@@ -3,7 +3,7 @@ import styled from "styled-components";
 import tw from "twin.macro";
 import { css } from "styled-components/macro"; //eslint-disable-line
 import HeaderBase, { NavLinks, NavLink, PrimaryLink } from "components/headers/light.js";
-import { SectionHeading } from "components/misc/Headings.js";
+import { SectionHeading } from "../../components/misc/Headings.js";
 import { SectionDescription } from "components/misc/Typography.js";
 import { PrimaryButton as PrimaryButtonBase } from "components/misc/Buttons.js";
 import { Container, ContentWithVerticalPadding } from "components/misc/Layouts.js";

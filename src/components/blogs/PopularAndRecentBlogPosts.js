@@ -3,7 +3,7 @@ import tw from "twin.macro";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import { css } from "styled-components/macro"; //eslint-disable-line
-import { SectionHeading } from "components/misc/Headings.js";
+import { SectionHeading } from "../../components/misc/Headings.js";
 import { Container, ContentWithPaddingXl } from "components/misc/Layouts.js";
 
 const Row = tw.div`flex flex-col lg:flex-row -mb-10`;

@@ -1,20 +1,20 @@
 import React from "react";
 import tw from "twin.macro";
 import { css } from "styled-components/macro"; //eslint-disable-line
-import AnimationRevealPage from "helpers/AnimationRevealPage.js";
-import Hero from "components/hero/TwoColumnWithInput.js";
-import Features from "components/features/ThreeColWithSideImage.js";
-import MainFeature from "components/features/TwoColWithButton.js";
-import MainFeature2 from "components/features/TwoColWithTwoHorizontalFeaturesAndButton.js";
-import FeatureWithSteps from "components/features/TwoColWithSteps.js";
-import Pricing from "components/pricing/ThreePlans.js";
-import Testimonial from "components/testimonials/TwoColumnWithImageAndRating.js";
-import FAQ from "components/faqs/SingleCol.js";
-import GetStarted from "components/cta/GetStarted";
-import Footer from "components/footers/FiveColumnWithBackground.js";
-import heroScreenshotImageSrc from "images/hero-screenshot-1.png";
-import macHeroScreenshotImageSrc from "images/hero-screenshot-2.png";
-import prototypeIllustrationImageSrc from "images/prototype-illustration.svg";
+import AnimationRevealPage from "../helpers/AnimationRevealPage.js";
+import Hero from "../components/hero/TwoColumnWithInput.js";
+import Features from "../components/features/ThreeColWithSideImage.js";
+import MainFeature from "../components/features/TwoColWithButton.js";
+import MainFeature2 from "../components/features/TwoColWithTwoHorizontalFeaturesAndButton.js";
+import FeatureWithSteps from "../components/features/TwoColWithSteps.js";
+import Pricing from "../components/pricing/ThreePlans.js";
+import Testimonial from "../components/testimonials/TwoColumnWithImageAndRating.js";
+import FAQ from "../components/faqs/SingleCol.js";
+import GetStarted from "../components/cta/GetStarted";
+import Footer from "../components/footers/FiveColumnWithBackground.js";
+import heroScreenshotImageSrc from "../images/hero-screenshot-1.png";
+import macHeroScreenshotImageSrc from "../images/hero-screenshot-2.png";
+import prototypeIllustrationImageSrc from "../images/prototype-illustration.svg";
 import { ReactComponent as BriefcaseIcon } from "feather-icons/dist/icons/briefcase.svg";
 import { ReactComponent as MoneyIcon } from "feather-icons/dist/icons/dollar-sign.svg";
 
@@ -72,38 +72,6 @@ export default () => {
             title: "Professionalism",
             description: "We assure you that our templates are designed and created by professional designers.",
             iconContainerCss: tw`bg-red-300 text-red-800`
-          }
-        ]}
-      />
-      <Pricing
-        subheading={<Subheading>Pricing</Subheading>}
-        heading={
-          <>
-            Reasonable & Flexible <HighlightedText>Plans.</HighlightedText>
-          </>
-        }
-        plans={[
-          {
-            name: "Personal",
-            price: "$17.99",
-            duration: "Monthly",
-            mainFeature: "For Individuals",
-            features: ["30 Templates", "7 Landing Pages", "12 Internal Pages", "Basic Assistance"]
-          },
-          {
-            name: "Business",
-            price: "$37.99",
-            duration: "Monthly",
-            mainFeature: "For Small Businesses",
-            features: ["60 Templates", "15 Landing Pages", "22 Internal Pages", "Priority Assistance"],
-            featured: true
-          },
-          {
-            name: "Enterprise",
-            price: "$57.99",
-            duration: "Monthly",
-            mainFeature: "For Large Companies",
-            features: ["90 Templates", "27 Landing Pages", "37 Internal Pages", "Personal Assistance"]
           }
         ]}
       />

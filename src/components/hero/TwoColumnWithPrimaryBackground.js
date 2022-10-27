@@ -8,7 +8,7 @@ import HeaderBase, {
   PrimaryLink as PrimaryLinkBase
 } from "../headers/light.js";
 import { Container as ContainerBase, ContentWithVerticalPadding, Content2Xl } from "components/misc/Layouts.js";
-import { SectionHeading } from "components/misc/Headings.js";
+import { SectionHeading } from "../../components/misc/Headings.js";
 import { SectionDescription } from "components/misc/Typography.js";
 import { PrimaryButton as PrimaryButtonBase } from "components/misc/Buttons.js";
 import logoImageSrc from "images/logo-light.svg";

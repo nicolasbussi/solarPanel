@@ -7,6 +7,8 @@ import LogoImage from "../../images/logo.svg";
 import { ReactComponent as FacebookIcon } from "../../images/facebook-icon.svg";
 import { ReactComponent as TwitterIcon } from "../../images/twitter-icon.svg";
 import { ReactComponent as YoutubeIcon } from "../../images/youtube-icon.svg";
+import { ReactComponent as GoogleIcon } from "../../images/google-icon.svg";
+
 
 const Container = tw.div`relative bg-gray-200 -mx-8 -mb-8 px-8`;
 const FiveColumns = tw.div`max-w-screen-xl mx-auto py-16 lg:py-20 flex flex-wrap justify-between`;
@@ -22,7 +24,8 @@ const Link = tw.a`border-b-2 border-transparent hocus:text-primary-500 hocus:bor
 
 const LogoContainer = tw.div`flex items-center justify-center md:justify-start`;
 const LogoImg = tw.img`w-8`;
-const LogoText = tw.h5`ml-2 text-xl font-black text-primary-500`;
+const LogoText = tw.h5`ml-0 text-xl font-black text-primary-500 `;
+// const LogoText = tw.h5`ml-2 text-xl font-black text-primary-500 `;
 
 const CompanyDescription = tw.p`mt-4 max-w-xs font-medium text-sm mx-auto md:mx-0 md:mr-4 `;
 
@@ -40,15 +43,17 @@ export default () => {
       <FiveColumns>
         <WideColumn>
           <LogoContainer>
-            <LogoImg src={LogoImage} />
-            <LogoText>Treact Inc.</LogoText>
+            {/* <LogoImg src={LogoImage} /> */}
+            <LogoText>
+              Innovation Home Services Corporation
+            </LogoText>
           </LogoContainer>
           <CompanyDescription>
-            Treact is an Internet Technology company providing design resources such as website templates and themes.
+            1-888-788-4822
           </CompanyDescription>
           <SocialLinksContainer>
-            <SocialLink href="https://facebook.com">
-              <FacebookIcon />
+            <SocialLink href="https://www.google.ca/maps/place/Innovation+Home+Services+Corp/@25.8945735,-80.1624458,12z/data=!4m5!3m4!1s0x0:0x6f9ef263d6ad759f!8m2!3d25.8945735!4d-80.1624458">
+              <GoogleIcon />
             </SocialLink>
             <SocialLink href="https://twitter.com">
               <TwitterIcon />

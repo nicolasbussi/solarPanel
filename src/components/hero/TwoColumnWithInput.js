@@ -48,7 +48,7 @@ const CustomersLogoStrip = styled.div`
 export default ({ roundedHeaderButton }) => {
   return (
     <>
-      <Header roundedHeaderButton={roundedHeaderButton} />
+      {/* <Header roundedHeaderButton={roundedHeaderButton} /> */}
       <Container>
         <TwoColumn>
           <LeftColumn>

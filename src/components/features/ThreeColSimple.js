@@ -2,23 +2,24 @@ import React from "react";
 import styled from "styled-components";
 import tw from "twin.macro";
 import { css } from "styled-components/macro"; //eslint-disable-line
-import { SectionHeading, Subheading as SubheadingBase } from "components/misc/Headings.js";
-import { SectionDescription } from "components/misc/Typography.js";
-import { Container, ContentWithPaddingXl } from "components/misc/Layouts.js";
-import { ReactComponent as ArrowRightIcon } from "images/arrow-right-icon.svg";
-import SupportIconImage from "images/support-icon.svg";
-import ShieldIconImage from "images/shield-icon.svg";
-import CustomizeIconImage from "images/customize-icon.svg";
-import { ReactComponent as SvgDecoratorBlob3 } from "images/svg-decorator-blob-3.svg";
+import { SectionHeading, Subheading as SubheadingBase } from "../../components/misc/Headings.js";
+import { SectionDescription } from "../../components/misc/Typography.js";
+import { Container, ContentWithPaddingXl } from "../../components/misc/Layouts.js";
+import { ReactComponent as ArrowRightIcon } from "../../images/arrow-right-icon.svg";
+import SupportIconImage from "../../images/support-icon.svg";
+import ShieldIconImage from "../../images/shield-icon.svg";
+import CustomizeIconImage from "../../images/customize-icon.svg";
+import { ReactComponent as SvgDecoratorBlob3 } from "../../images/svg-decorator-blob-3.svg";
+import { ReactComponent as CheckboxIcon } from "feather-icons/dist/icons/check-circle.svg";
 
 const Heading = tw(SectionHeading)``;
 const Subheading = tw(SubheadingBase)`text-center mb-3`;
 const Description = tw(SectionDescription)`text-center mx-auto`;
 const ThreeColumnContainer = styled.div`
-  ${tw`mt-10 flex flex-col items-center lg:items-stretch lg:flex-row flex-wrap lg:justify-center max-w-screen-lg mx-auto`}
+  ${tw`mt-10 flex flex-col items-center lg:items-stretch lg:flex-row flex-wrap lg:justify-center  mx-auto`}
 `;
 const Column = styled.div`
-  ${tw`lg:w-1/3 max-w-xs`}
+  ${tw`lg:w-1/3`}
 `;
 
 const Card = styled.a`
@@ -49,15 +50,18 @@ const Card = styled.a`
 const DecoratorBlob = styled(SvgDecoratorBlob3)`
   ${tw`pointer-events-none absolute right-0 bottom-0 w-64 opacity-25 transform translate-x-32 translate-y-40`}
 `;
-
+const FeatureList = tw.ul`mt-12 leading-loose`;
+const Feature = tw.li`flex items-center`;
+const FeatureIcon = tw(CheckboxIcon)`w-5 h-5 text-primary-500`;
+const FeatureText = tw.p`ml-2 font-light text-gray-700 text-sm`;
 export default ({
   cards = [],
-  linkText = "Learn More",
+  linkText = null,
   heading = "",
   subheading = "",
   description = "",
   imageContainerCss = null,
-  imageCss = null
+  imageCss = null,
 }) => {
   /*
    * This componets accepts a prop - `cards` which is an array of object denoting the cards. Each object in the cards array can have the following keys (Change it according to your need, you can also add more objects to have more cards in this feature component):
@@ -76,11 +80,23 @@ export default ({
           {cards.map((card, i) => (
             <Column key={i}>
               <Card href={card.url}>
-                <span className="imageContainer" css={imageContainerCss}>
-                  <img src={card.imageSrc} alt="" css={imageCss} />
-                </span>
+                {card.imageSrc && (
+                  <span className="imageContainer" css={imageContainerCss}>
+                    <img src={card.imageSrc} alt="" css={imageCss} />
+                  </span>
+                )}
                 <span className="title">{card.title}</span>
-                <p className="description">{card.description}</p>
+                 {card.imageSrc && ( <p className="description">{card.description}</p> )}
+                {card.features && (
+                  <FeatureList>
+                  {card.features.map((feature, index) => (
+                    <Feature key={index}>
+                      <FeatureIcon />
+                      <FeatureText>{feature}</FeatureText>
+                    </Feature>
+                  ))}
+                </FeatureList>
+                )} 
                 {linkText && (
                   <span className="link">
                     <span>{linkText}</span>

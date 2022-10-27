@@ -1,7 +1,7 @@
 import React from "react";
 import tw from "twin.macro";
 import { css } from "styled-components/macro"; //eslint-disable-line
-import { SectionHeading, Subheading as SubheadingBase } from "components/misc/Headings.js";
+import { SectionHeading, Subheading as SubheadingBase } from "../../components/misc/Headings.js";
 import { Container as ContainerBase, ContentWithPaddingXl } from "components/misc/Layouts";
 import { SectionDescription } from "components/misc/Typography";
 
