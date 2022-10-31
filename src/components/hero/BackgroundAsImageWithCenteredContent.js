@@ -17,11 +17,13 @@ const StyledHeader = styled(Header)`
 
 const PrimaryLink = tw(PrimaryLinkBase)`rounded-full`
 const Container = styled.div`
-  ${tw`relative -mx-8 -mt-8 bg-center bg-cover h-screen min-h-144`}
-  background-image: url("https://images.unsplash.com/photo-1536300007881-7e482242baa5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&q=80");
+  ${tw`relative -mx-8 -mt-8 bg-center bg-cover h-80 min-h-12`}
+  // background-image: url("https://images.unsplash.com/photo-1536300007881-7e482242baa5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&q=80");
+  background-image: url("https://images.unsplash.com/photo-1579546929662-711aa81148cf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
 `;
 
-const OpacityOverlay = tw.div`z-10 absolute inset-0 bg-black opacity-75`;
+const OpacityOverlay = tw.div`z-10 absolute inset-0`;
+// bg-black opacity-75`;
 
 const HeroContainer = tw.div`z-20 relative px-6 sm:px-8 mx-auto h-full flex flex-col`;
 const Content = tw.div`px-4 flex flex-1 flex-col justify-center items-center`;
@@ -38,22 +40,22 @@ const PrimaryAction = tw.button`rounded-full px-8 py-3 mt-10 text-sm sm:text-bas
 export default () => {
   const navLinks = [
     <NavLinks key={1}>
-      <NavLink href="#">
-        About
+      <NavLink href="/about-us">
+        About Us
       </NavLink>
-      <NavLink href="#">
-        Blog
+      <NavLink href="/benefits">
+        Benefits
       </NavLink>
-      <NavLink href="#">
-        Locations
+      <NavLink href="/how-it-works">
+        How it works
       </NavLink>
-      <NavLink href="#">
+      <NavLink href="/pricing">
         Pricing
       </NavLink>
     </NavLinks>,
     <NavLinks key={2}>
       <PrimaryLink href="/#">
-        Hire Us
+        Schedule Free Call
       </PrimaryLink>
     </NavLinks>
   ];
@@ -62,15 +64,15 @@ export default () => {
     <Container>
       <OpacityOverlay />
       <HeroContainer>
-        {/* <StyledHeader links={navLinks} /> */}
-        <Content>
+        <StyledHeader links={navLinks} />
+        {/* <Content>
           <Heading>
               Book Music & Comedy Events
               <br />
               anywhere in New York
           </Heading>
           <PrimaryAction>Search Events Near Me</PrimaryAction>
-        </Content>
+        </Content> */}
       </HeroContainer>
     </Container>
   );

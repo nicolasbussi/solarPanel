@@ -10,7 +10,7 @@ const Home = () => {
     <>
     <SolarPanelLandingPage>  </SolarPanelLandingPage>
 
-      <Features
+      {/* <Features
         cards={[
           {
             title: "QUALITY",
@@ -25,7 +25,7 @@ const Home = () => {
             features:featuresMission
           },
         ]}
-      />
+      /> */}
     </>
   )
 };

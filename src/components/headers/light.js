@@ -13,6 +13,7 @@ import { ReactComponent as CloseIcon } from "feather-icons/dist/icons/x.svg";
 const Header = tw.header`
   flex justify-between items-center
   max-w-screen-xl mx-auto
+  p-10
 `;
 
 export const NavLinks = tw.div`inline-block`;
@@ -51,7 +52,6 @@ export const MobileNavLinks = motion(styled.div`
 
 export const DesktopNavLinks = tw.nav`
   hidden lg:flex flex-1 justify-between items-center
-  h-20
 `;
 
 export default ({ roundedHeaderButton = false, logoLink, links, className, collapseBreakpointClass = "lg" }) => {
@@ -73,7 +73,7 @@ export default ({ roundedHeaderButton = false, logoLink, links, className, colla
       <NavLink href="/about-us">About Us</NavLink>
       <NavLink href="/contact">Contact</NavLink>
       <NavLink href="/faqs">FAQS</NavLink>
-      <PrimaryLink css={roundedHeaderButton && tw`rounded-full`}href="/#">CTA</PrimaryLink>
+      <PrimaryLink css={roundedHeaderButton && tw`rounded-full`}href="/#">Schedule Free Call</PrimaryLink>
     </NavLinks>
   ];
 
@@ -83,7 +83,7 @@ export default ({ roundedHeaderButton = false, logoLink, links, className, colla
   const defaultLogoLink = (
     <LogoLink href="/">
       {/* <img src={logo} alt="logo" /> */}
-      Solar Panel
+      Innovation <br></br> Energy Services
     </LogoLink>
   );
 

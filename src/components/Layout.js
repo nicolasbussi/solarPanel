@@ -1,20 +1,26 @@
 import { Outlet } from 'react-router-dom';
-import tw from "twin.macro";
-import styled from "styled-components";
-// import Header from './Header';
-import Header from "./headers/light.js";
+// import Header from "./headers/light.js";
 import MiniCenteredFooter from "../components/footers/MiniCenteredFooter.js";
+// import Hero from "components/hero/BackgroundAsImageWithCenteredContent.js";
+
+
+
+import React from "react";
+import Hero from "components/hero/BackgroundAsImageWithCenteredContent.js";
+
+
+
 
 
 const Layout = () => {
   return (
-    <div>
-      <Header/>
-      <div className="content">
-        <Outlet />
-      </div>
-      <MiniCenteredFooter>  </MiniCenteredFooter> 
-    </div>
+    <>
+    <Hero />
+       <div className="content">
+         <Outlet />
+       </div>
+    {/* <MiniCenteredFooter />  */}
+    </>
   );
 };
 
