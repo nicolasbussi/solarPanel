@@ -3,7 +3,7 @@ import tw from "twin.macro";
 import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import HeaderImage from "/Users/fabiosalvo/Repositories/solarPanel/src/images/headerBackground.svg" ;
+import HeaderImage from "../../images/headerBackground.svg" ;
 import Header, { NavLink, NavLinks, PrimaryLink as PrimaryLinkBase, LogoLink, NavToggle, DesktopNavLinks } from "../headers/light.js";
 
 const StyledHeader = styled(Header)`

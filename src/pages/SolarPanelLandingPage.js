@@ -21,6 +21,7 @@ export default () => {
   font-family: 'Inter';
   font-style: normal;
   font-weight: 400`;
+  const ButtonDiv = styled.div`${tw`pl-10 lg:pl-35 xl:pl-35 2xl:pl-35 md:pl-10 sm:pl-10 pt-10`}`;
   const cardDescription = tw(SectionDescription)`mx-auto`;
   const Subheading= tw(SubheadingCustom)`mx-auto`;
   const cards = [
@@ -115,7 +116,9 @@ export default () => {
 
     
     <Description>Replace your power coming from the grid with solar<br></br> generated power today</Description>
+    <ButtonDiv>
     <PrimaryLink css={tw`rounded-full bg-cta-color `}href="/#">Schedule Free Call</PrimaryLink>
+    </ButtonDiv>
 
     <Content>
           {cards.map((card, i) => (
