@@ -2,7 +2,16 @@ module.exports = {
   prefix: '',
   important: false,
   separator: ':',
+  content: [
+    "./src/**/*.{js,jsx,ts,tsx}",
+  ],
   theme: {
+    extend: {
+      backgroundImage: theme => ({
+        'header-image': "url('/images/headerBackground.png')",
+      })
+    },
+   
     screens: {
       sm: '640px',
       md: '768px',
@@ -11,6 +20,9 @@ module.exports = {
       "2xl": "1440px",
     },
     colors: {
+      'header-start-color': '#C87C00',
+      'header-middle-color': '#8B3208',
+      'header-end-color': '#010420',
       transparent: 'transparent',
 
       black: '#000',
@@ -167,7 +179,10 @@ module.exports = {
       '16': '4rem',
       '20': '5rem',
       '24': '6rem',
+      '28': '7rem',
+      '29': '7.5rem',
       '32': '8rem',
+      '35': '9rem',
       '40': '10rem',
       '48': '12rem',
       '56': '14rem',
@@ -293,6 +308,9 @@ module.exports = {
       '4xl': '2.25rem',
       '5xl': '3rem',
       '6xl': '4rem',
+      '7xl': '5rem',
+      '8xl': '6rem',
+      '9xl': '7rem',
     },
     fontWeight: {
       hairline: '100',

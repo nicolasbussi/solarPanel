@@ -19,13 +19,17 @@ const StyledHeader = styled(Header)`
 const pathName = window.location.pathname
 
 
-
-
+const HeaderTitle = styled.h1`${tw` text-6xl lg:text-8xl xl:text-8xl 2xl:text-8xl md:text-8xl sm:text-7xl  font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-header-start-color via-header-middle-color to-header-end-color pt-35 lg:pt-35 xl:pt-35 2xl:pt-35 md:pt-32 sm:pt-35 pl-10 lg:pl-35 xl:pl-35 2xl:pl-35 md:pl-10 sm:pl-10`}
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 700;
+line-height: 1;
+`;
 
 const PrimaryLink = tw(PrimaryLinkBase)`rounded-full`
 const Container = styled.div`
   ${tw`relative -mx-8 -mt-8  bg-center bg-cover h-96 min-h-12`}
-  background-image: url("https://github.com/nicolasbussi/solarPanel/blob/main/src/images/headerBackground.svg")
+  background-image: url('https://firebasestorage.googleapis.com/v0/b/solarpanel-7144d.appspot.com/o/header%2FMask%20Group.png?alt=media&token=e107a702-ce9d-47a6-909d-9c4b05038c95')
   ;
 `;
 
@@ -77,15 +81,7 @@ export default () => {
       <OpacityOverlay />
       <HeroContainer>
         <StyledHeader links={navLinks} />
-        {/* <Content>
-          <Heading>
-              Book Music & Comedy Events
-              <br />
-              anywhere in New York
-          </Heading>
-          <PrimaryAction>Search Events Near Me</PrimaryAction>
-        </Content> */}
-         <headerH1 class="ex1"> Your Florida <br></br> Solar Partner</headerH1>
+         <HeaderTitle>{'Your Florida'}<br></br>{'solar partners'}</HeaderTitle>
       </HeroContainer>
      
       
