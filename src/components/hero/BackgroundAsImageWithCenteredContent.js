@@ -3,7 +3,7 @@ import tw from "twin.macro";
 import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-
+import HeaderImage from "/Users/fabiosalvo/Repositories/solarPanel/src/images/headerBackground.svg" ;
 import Header, { NavLink, NavLinks, PrimaryLink as PrimaryLinkBase, LogoLink, NavToggle, DesktopNavLinks } from "../headers/light.js";
 
 const StyledHeader = styled(Header)`
@@ -29,7 +29,7 @@ line-height: 1;
 const PrimaryLink = tw(PrimaryLinkBase)`rounded-full`
 const Container = styled.div`
   ${tw`relative -mx-8 -mt-8  bg-center bg-cover h-96 min-h-12`}
-  background-image: url('https://firebasestorage.googleapis.com/v0/b/solarpanel-7144d.appspot.com/o/header%2FMask%20Group.png?alt=media&token=e107a702-ce9d-47a6-909d-9c4b05038c95')
+  background-image: url("${HeaderImage}")
   ;
 `;
 
@@ -74,31 +74,6 @@ export default () => {
 
   
 
-var titleTop = '';
-var titleBottom = '';
-
-if(window.location.pathname === '/'){
-  titleTop = 'Your Florida';
-  titleBottom = 'solar partners';
-
-} else if (window.location.pathname === '/about-us'){
-  titleTop = 'About';
-  titleBottom = 'Us';
-
-} else if (window.location.pathname === '/how-it-works'){
-    titleTop = 'How it';
-    titleBottom = 'Works';
-    
-   
-} else if (window.location.pathname === '/pricing'){
-  titleTop = 'Convenient';
-  titleBottom = 'Pricing';
-}
-
-else if (window.location.pathname === '/benefits'){
-  titleTop = 'Solar Panel';
-  titleBottom = 'Benefits';
-}
 
   return (
     
@@ -106,7 +81,7 @@ else if (window.location.pathname === '/benefits'){
       <OpacityOverlay />
       <HeroContainer>
         <StyledHeader links={navLinks} />
-         <HeaderTitle>{titleTop}<br></br>{titleBottom}</HeaderTitle>
+         <HeaderTitle>{'Your Florida'}<br></br>{'solar partners'}</HeaderTitle>
       </HeroContainer>
      
       

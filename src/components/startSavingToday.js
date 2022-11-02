@@ -5,7 +5,7 @@ import { css } from "styled-components/macro"; //eslint-disable-line
 import { Subheading } from "./misc/Headings";
 
 const Container = styled.div`
-  ${tw`relative -mx-8 -mt-8 bg-center bg-cover h-72 min-h-12 ml-32 mr-32 rounded`}
+  ${tw`relative -mx-8 -mt-8 bg-center bg-cover h-72 min-h-12 ml-32 mr-32 rounded-[20px]`}
   background-image: url("https://images.unsplash.com/photo-1579546929662-711aa81148cf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
 `;
 

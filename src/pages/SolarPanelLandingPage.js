@@ -8,16 +8,25 @@ import HowItWorks from "components/blogs/ThreeColSimpleWithImageAndDashedBorder.
 import styled from "styled-components";
 import StartSavingToday from "components/startSavingToday.js";
 import LearnMoreAboutPricing from "components/learnMoreAboutPricing.js";
+import { PrimaryLink as PrimaryLink} from "components/headers/light.js";
+import FirstBlockHomeImage from  "../images/firstBlockHomeImage.png";
+import SecondBlockHomeImage from  "../images/secondBlockHomeImage.png";
+import ThirdBlockHomeImage from  "../images/thirdBlockHomeImage.png";
+
 export default () => {
   // const Subheading = tw.span`uppercase tracking-widest font-bold text-primary-500`;
   const HighlightedText = tw.span`text-primary-500`;
   const Heading = tw(SectionHeading)`w-full text-white`;
-  const Description = tw(SectionDescription)`mx-auto`;
+  const Description = styled.h3`${tw`tracking-wide text-description-color pl-10 lg:pl-35 xl:pl-35 2xl:pl-35 md:pl-10 sm:pl-10`}
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400`;
+  const cardDescription = tw(SectionDescription)`mx-auto`;
   const Subheading= tw(SubheadingCustom)`mx-auto`;
   const cards = [
     {
       imageSrc:
-        "https://images.unsplash.com/photo-1550699026-4114bbf4fb49?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=632&q=80",
+      FirstBlockHomeImage,
       subtitle: "SAVINGS",
       title: "Pay less for Electricity",
       description:
@@ -27,7 +36,7 @@ export default () => {
 
     {
       imageSrc:
-        "https://images.unsplash.com/photo-1543423924-b9f161af87e4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
+        SecondBlockHomeImage,
       subtitle: "ENVIROMENT",
       title: "Produce clean energy",
       description:
@@ -37,7 +46,7 @@ export default () => {
 
     {
       imageSrc:
-        "https://images.unsplash.com/photo-1509824227185-9c5a01ceba0d?ixlib=rb-1.2.1&auto=format&fit=crop&w=658&q=80",
+      ThirdBlockHomeImage,
       subtitle: "HOME VALUE",
       title: "Increase  home value",
       description:
@@ -52,10 +61,14 @@ export default () => {
   ]);
   const Image = styled.div(props => [
     `background-image: url("${props.imageSrc}");`,
-    tw`rounded md:w-1/2 lg:w-5/12 xl:w-1/3 flex-shrink-0 h-80 md:h-144 bg-cover bg-center mx-4 sm:mx-8 md:mx-4 lg:mx-8`
+    tw`rounded md:w-1/3 lg:w-1/2 xl:w-1/3 flex-shrink-0 h-80 md:h-80 bg-cover bg-center mx-4 sm:mx-8 md:mx-4 lg:mx-8`
   ]);
   const Details = tw.div`mt-4 md:mt-0 md:max-w-md mx-4 sm:mx-8 md:mx-4 lg:mx-8`;
-  const Subtitle = tw.div`font-bold tracking-wide text-secondary-100 text-primary-100`;
+  const Subtitle = styled.h3`${tw`tracking-wide text-primary-100`}
+  font-family: 'Inter';
+  font-style: normal;
+  letter-spacing: 0.2em;
+  font-weight: 600`;
   const Title = tw.h4`text-3xl font-bold text-gray-900`;
   const Link = tw.a`inline-block mt-4 text-sm text-primary-500 font-bold cursor-pointer transition duration-300 border-b-2 border-transparent hover:border-primary-500`;
 
@@ -101,18 +114,17 @@ export default () => {
 <>
 
     
-    <Description>Produce clean energy and save on your bills</Description>
-    <Description>Join more than 1000+ happy costumers</Description>
-
+    <Description>Replace your power coming from the grid with solar<br></br> generated power today</Description>
+    <PrimaryLink css={tw`rounded-full bg-cta-color `}href="/#">Schedule Free Call</PrimaryLink>
 
     <Content>
           {cards.map((card, i) => (
             <Card key={i} reversed={i % 2 === 1}>
               <Image imageSrc={card.imageSrc} />
               <Details>
-                <Subtitle>{card.subtitle}</Subtitle>
+                <Subtitle style={"color: blue"}>{card.subtitle}</Subtitle>
                 <Title>{card.title}</Title>
-                <Description>{card.description}</Description>
+                <cardDescription>{card.description}</cardDescription>
                 {/* <Link href={card.url}>See Event Details</Link> */}
               </Details>
             </Card>

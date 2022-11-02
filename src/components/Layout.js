@@ -22,15 +22,14 @@ export const NavLink = tw.a`
 
 export const LogoLink = styled(NavLink)`
   ${tw`flex items-center font-black border-b-0 text-2xl! ml-0!`};
+  
   img {
     ${tw`w-10 mr-3`}
   }
 `;
 const defaultLogoLink = (
   <LogoLink href="/">
-    {/* <img src={logo} alt="logo" /> */}
-    Innovation <br></br> Energy Services
-  </LogoLink>
+    {"Innovation"} <br></br> {"Energy Services"}</LogoLink>
 );
 
 const links = [

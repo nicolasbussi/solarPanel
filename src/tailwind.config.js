@@ -23,6 +23,8 @@ module.exports = {
       'header-start-color': '#C87C00',
       'header-middle-color': '#8B3208',
       'header-end-color': '#010420',
+      'description-color': '#425466',
+      'cta-color': '#231A36',
       transparent: 'transparent',
 
       black: '#000',
