@@ -19,7 +19,7 @@ const StyledHeader = styled(Header)`
 const pathName = window.location.pathname
 
 
-const HeaderTitle = styled.h1`${tw` text-6xl lg:text-8xl xl:text-8xl 2xl:text-8xl md:text-8xl sm:text-7xl  font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-header-start-color via-header-middle-color to-header-end-color pt-35 lg:pt-35 xl:pt-35 2xl:pt-35 md:pt-32 sm:pt-35 pl-10 lg:pl-35 xl:pl-35 2xl:pl-35 md:pl-10 sm:pl-10`}
+const HeaderTitle = styled.h1`${tw` text-6xl lg:text-8xl xl:text-8xl 2xl:text-8xl md:text-8xl sm:text-7xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-header-start-color via-header-middle-color to-header-end-color pt-35 lg:pt-35 xl:pt-35 2xl:pt-35 md:pt-32 sm:pt-35 pl-10 lg:pl-35 xl:pl-35 2xl:pl-35 md:pl-10 sm:pl-10`}
 font-family: 'Poppins';
 font-style: normal;
 font-weight: 700;

@@ -17,11 +17,11 @@ const Layout = () => {
     <>
     <Hero />
        <div className="content">
-     
+     <div style={{height: '15vh'}}> </div>
          <Outlet />
-         <div style={{height: '102vh'}}>
+         
         
-        </div>
+       
        </div>
     {/* <MiniCenteredFooter />  */}
     </>
