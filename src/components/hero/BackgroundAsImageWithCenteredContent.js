@@ -74,6 +74,31 @@ export default () => {
 
   
 
+var titleTop = '';
+var titleBottom = '';
+
+if(window.location.pathname === '/'){
+  titleTop = 'Your Florida';
+  titleBottom = 'solar partners';
+
+} else if (window.location.pathname === '/about-us'){
+  titleTop = 'About';
+  titleBottom = 'Us';
+
+} else if (window.location.pathname === '/how-it-works'){
+    titleTop = 'How it';
+    titleBottom = 'Works';
+    
+   
+} else if (window.location.pathname === '/pricing'){
+  titleTop = 'Convenient';
+  titleBottom = 'Pricing';
+}
+
+else if (window.location.pathname === '/benefits'){
+  titleTop = 'Solar Panel';
+  titleBottom = 'Benefits';
+}
 
   return (
     
@@ -81,7 +106,7 @@ export default () => {
       <OpacityOverlay />
       <HeroContainer>
         <StyledHeader links={navLinks} />
-         <HeaderTitle>{'Your Florida'}<br></br>{'solar partners'}</HeaderTitle>
+         <HeaderTitle>{titleTop}<br></br>{titleBottom}</HeaderTitle>
       </HeroContainer>
      
       

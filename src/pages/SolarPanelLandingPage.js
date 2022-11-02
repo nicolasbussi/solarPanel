@@ -4,8 +4,10 @@ import { css } from "styled-components/macro"; //eslint-disable-line
 import { SectionHeading, Subheading as SubheadingBase, SubheadingCustom } from "../components/misc/Headings.js";
 import { SectionDescription } from "../components/misc/Typography";
 import { Container as ContainerBase, ContentWithPaddingXl } from "../components/misc/Layouts";
-
+import HowItWorks from "components/blogs/ThreeColSimpleWithImageAndDashedBorder.js";
 import styled from "styled-components";
+import StartSavingToday from "components/startSavingToday.js";
+import LearnMoreAboutPricing from "components/learnMoreAboutPricing.js";
 export default () => {
   // const Subheading = tw.span`uppercase tracking-widest font-bold text-primary-500`;
   const HighlightedText = tw.span`text-primary-500`;
@@ -116,7 +118,7 @@ export default () => {
             </Card>
           ))}
         </Content>
-
+        <Container  style={{height: "100px"}}></Container>
         <StatsHeadingContainer>
           {/* {subheadingStatsText && <Subheading>{subheadingStatsText}</Subheading>} */}
           <Heading>{headingStatsText}</Heading>
@@ -131,8 +133,13 @@ export default () => {
         </Container>
         </StatsHeadingContainer>
 
+        <HowItWorks></HowItWorks>
 
+        <LearnMoreAboutPricing />
 
+        <Container  style={{height: "100px"}}></Container>
+
+        <StartSavingToday />
     </>
   );
 }
