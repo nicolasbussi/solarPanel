@@ -2,6 +2,7 @@ import React from "react";
 import tw from "twin.macro";
 import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import Header, { NavLink, NavLinks, PrimaryLink as PrimaryLinkBase, LogoLink, NavToggle, DesktopNavLinks } from "../headers/light.js";
 
@@ -15,11 +16,17 @@ const StyledHeader = styled(Header)`
   }
 `;
 
+const pathName = window.location.pathname
+
+
+
+
+
 const PrimaryLink = tw(PrimaryLinkBase)`rounded-full`
 const Container = styled.div`
-  ${tw`relative -mx-8 -mt-8 bg-center bg-cover h-80 min-h-12`}
-  // background-image: url("https://images.unsplash.com/photo-1536300007881-7e482242baa5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&q=80");
-  background-image: url("https://images.unsplash.com/photo-1579546929662-711aa81148cf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
+  ${tw`relative -mx-8 -mt-8  bg-center bg-cover h-96 min-h-12`}
+
+  ;
 `;
 
 const OpacityOverlay = tw.div`z-10 absolute inset-0`;
@@ -38,6 +45,7 @@ const Heading = styled.h1`
 const PrimaryAction = tw.button`rounded-full px-8 py-3 mt-10 text-sm sm:text-base sm:mt-16 sm:px-8 sm:py-4 bg-gray-100 font-bold shadow transition duration-300 bg-primary-500 text-gray-100 hocus:bg-primary-700 hocus:text-gray-200 focus:outline-none focus:shadow-outline`;
 
 export default () => {
+  
   const navLinks = [
     <NavLinks key={1}>
       <NavLink href="/about-us">
@@ -60,8 +68,22 @@ export default () => {
     </NavLinks>
   ];
 
+  let backgroundImage = pathName == '' ? "https://images.unsplash.com/photo-1579546929662-711aa81148cf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80" : pathName == 'about-us' ? "https://images.unsplash.com/photo-1604076984203-587c92ab2e58?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80" : pathName == 'contact' ? "https://images.unsplash.com/photo-1604076850742-4c7221f3101b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80" : "https://images.unsplash.com/photo-1557683316-973673baf926?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2029&q=80" 
+
+  const divStyle = {
+    backgroundImage: `url("${backgroundImage}")` ,
+    
+};
+
+const secondDivStyle = {
+  backgroundImage: `url("https://images.unsplash.com/photo-1579546929662-711aa81148cf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80")` ,
+  
+};
+
+
   return (
-    <Container>
+    
+    <Container style={pathName == '' ? divStyle : secondDivStyle}>
       <OpacityOverlay />
       <HeroContainer>
         <StyledHeader links={navLinks} />
@@ -74,6 +96,8 @@ export default () => {
           <PrimaryAction>Search Events Near Me</PrimaryAction>
         </Content> */}
       </HeroContainer>
+      
+      
     </Container>
   );
 };

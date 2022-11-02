@@ -108,6 +108,27 @@ button span {
   top: -7px;
 }
 
+.font-link {
+  font-family: 'Abel', regular;
+  font-family: 'Poppins', regular;
+}
+
+headerH1.ex1 {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 10%;
+  padding-top: 0;/* just to reset */
+  padding-top: -205px;/* would allow correct alignment */
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 94px;
+  line-height: 1;
+  background:  linear-gradient(96.46deg, #C87C00 3.72%, #8B3208 31.05%, rgba(83, 32, 15, 0.82) 68.54%, #010420 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 /* content */
 
 /* .content {
