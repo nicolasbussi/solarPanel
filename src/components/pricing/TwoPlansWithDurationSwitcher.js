@@ -69,9 +69,9 @@ const DecoratorBlob2 = styled(SvgDecoratorBlob2)`
 `;
 
 export default ({
-  subheading = "Pricing",
-  heading = "Flexible Plans.",
-  description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  subheading = "",
+  heading = "Welcome to Innovation Home Services Corp.",
+  description = "Innovation Home Services works with the best in the industry. Our vision starts with the goal of making solar, simple and affordable for everyone.\nSince 2012, Floridians have been trusting us to provide the resources and knowledge they need in order to achieve their solar power goals.\nThrough our focus on customer service, dedication to customer relationships, and passion for innovation energy technologies, we've positioned ourselves to be the industry leaders that can adapt and grown along with the evolving solar landscape. ",
   plans = null,
   primaryButtonText = "Buy Now",
   planDurations = [
@@ -112,40 +112,10 @@ export default ({
           {subheading && <Subheading>{subheading}</Subheading>}
           <Heading>{heading}</Heading>
           {description && <Description>{description}</Description>}
-        <PlanDurationSwitcher>
-          {planDurations.map((planDuration, index) => (
-            <SwitchButton active={activeDurationIndex === index} key={index} onClick={() => setActiveDurationIndex(index)}>{planDuration.switcherText}</SwitchButton>
-          ))}
-        </PlanDurationSwitcher>
+       
         </HeaderContainer>
-        <PlansContainer>
-          {plans.map((plan, index) => (
-            <Plan key={index} featured={plan.featured}>
-              <PlanHeader>
-                <span className="priceAndDuration">
-                  <span className="price">{plan.durationPrices[activeDurationIndex]}</span>
-                  <span className="slash"> / </span>
-                  <span className="duration">{planDurations[activeDurationIndex].text}</span>
-                </span>
-                <span className="name">{plan.name}</span>
-                <span className="mainFeature">{plan.mainFeature}</span>
-              </PlanHeader>
-              <PlanFeatures>
-                {plan.features.map((feature, index) => (
-                  <span key={index} className="feature">
-                    {feature}
-                  </span>
-                ))}
-              </PlanFeatures>
-              <PlanAction>
-                <BuyNowButton>{primaryButtonText}</BuyNowButton>
-              </PlanAction>
-            </Plan>
-          ))}
-        </PlansContainer>
       </ContentWithPaddingXl>
-      <DecoratorBlob1 />
-      <DecoratorBlob2 />
+
     </Container>
   );
 };
