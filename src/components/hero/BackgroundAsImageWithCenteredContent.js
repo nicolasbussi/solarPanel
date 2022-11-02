@@ -25,7 +25,7 @@ const pathName = window.location.pathname
 const PrimaryLink = tw(PrimaryLinkBase)`rounded-full`
 const Container = styled.div`
   ${tw`relative -mx-8 -mt-8  bg-center bg-cover h-96 min-h-12`}
-
+  background-image: url("https://github.com/nicolasbussi/solarPanel/blob/main/src/images/headerBackground.svg")
   ;
 `;
 
@@ -68,22 +68,12 @@ export default () => {
     </NavLinks>
   ];
 
-  let backgroundImage = pathName == '' ? "https://images.unsplash.com/photo-1579546929662-711aa81148cf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80" : pathName == 'about-us' ? "https://images.unsplash.com/photo-1604076984203-587c92ab2e58?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80" : pathName == 'contact' ? "https://images.unsplash.com/photo-1604076850742-4c7221f3101b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80" : "https://images.unsplash.com/photo-1557683316-973673baf926?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2029&q=80" 
-
-  const divStyle = {
-    backgroundImage: `url("${backgroundImage}")` ,
-    
-};
-
-const secondDivStyle = {
-  backgroundImage: `url("https://images.unsplash.com/photo-1579546929662-711aa81148cf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80")` ,
   
-};
 
 
   return (
     
-    <Container style={pathName == '' ? divStyle : secondDivStyle}>
+    <Container >
       <OpacityOverlay />
       <HeroContainer>
         <StyledHeader links={navLinks} />
@@ -95,8 +85,9 @@ const secondDivStyle = {
           </Heading>
           <PrimaryAction>Search Events Near Me</PrimaryAction>
         </Content> */}
+         <headerH1 class="ex1"> Your Florida <br></br> Solar Partner</headerH1>
       </HeroContainer>
-      
+     
       
     </Container>
   );

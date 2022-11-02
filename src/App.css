@@ -117,8 +117,7 @@ headerH1.ex1 {
   display: flex;
   flex-wrap: wrap;
   padding-left: 10%;
-  padding-top: 0;/* just to reset */
-  padding-top: -205px;/* would allow correct alignment */
+  padding-top: 140px;/* would allow correct alignment */
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 700;

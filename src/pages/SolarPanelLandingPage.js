@@ -97,8 +97,8 @@ export default () => {
   return (
     // <AnimationRevealPage>
 <>
-<headerH1 class="ex1"> Your Florida <br></br> Solar Partner</headerH1>
-    {/* <Heading>Your Florida solar panel</Heading> */}
+
+    
     <Description>Produce clean energy and save on your bills</Description>
     <Description>Join more than 1000+ happy costumers</Description>
 
