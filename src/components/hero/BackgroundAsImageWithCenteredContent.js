@@ -3,7 +3,7 @@ import tw from "twin.macro";
 import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import HeaderImage from "/Users/fabiosalvo/Repositories/solarPanel/src/images/headerBackground.svg" ;
+import HeaderImage from "../../images/headerBackground.svg";
 import Header, { NavLink, NavLinks, PrimaryLink as PrimaryLinkBase, LogoLink, NavToggle, DesktopNavLinks } from "../headers/light.js";
 
 const StyledHeader = styled(Header)`
@@ -16,10 +16,7 @@ const StyledHeader = styled(Header)`
   }
 `;
 
-const pathName = window.location.pathname
-
-
-const HeaderTitle = styled.h1`${tw` text-6xl lg:text-8xl xl:text-8xl 2xl:text-8xl md:text-8xl sm:text-7xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-header-start-color via-header-middle-color to-header-end-color pt-35 lg:pt-35 xl:pt-35 2xl:pt-35 md:pt-32 sm:pt-35 pl-10 lg:pl-35 xl:pl-35 2xl:pl-35 md:pl-10 sm:pl-10`}
+const HeaderTitle = styled.h1`${tw`text-6xl  xxs:text-4xl xs:text-6xl lg:text-8xl xl:text-8xl 2xl:text-8xl md:text-8xl sm:text-7xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-header-start-color via-header-middle-color to-header-end-color pt-35 lg:pt-35 xl:pt-35 2xl:pt-35 md:pt-32 sm:pt-35 pl-10 lg:pl-35 xl:pl-35 2xl:pl-35 md:pl-10 sm:pl-10`}
 font-family: 'Poppins';
 font-style: normal;
 font-weight: 700;
@@ -30,7 +27,6 @@ const PrimaryLink = tw(PrimaryLinkBase)`rounded-full`
 const Container = styled.div`
   ${tw`relative -mx-8 -mt-8  bg-center bg-cover h-96 min-h-12`}
   background-image: url("${HeaderImage}")
-  ;
 `;
 
 const OpacityOverlay = tw.div`z-10 absolute inset-0`;
@@ -72,16 +68,39 @@ export default () => {
     </NavLinks>
   ];
 
-  
+  var titleTop = '';
+  var titleBottom = '';
 
+  if(window.location.pathname === '/'){
+    titleTop = 'Your Florida';
+    titleBottom = 'solar partners';
+
+  } else if (window.location.pathname === '/about-us'){
+    titleTop = 'About';
+    titleBottom = 'Us';
+
+  } else if (window.location.pathname === '/how-it-works'){
+      titleTop = 'How it';
+      titleBottom = 'Works';
+      
+    
+  } else if (window.location.pathname === '/pricing'){
+    titleTop = 'Convenient';
+    titleBottom = 'Pricing';
+  }
+
+  else if (window.location.pathname === '/benefits'){
+    titleTop = 'Solar Panel';
+    titleBottom = 'Benefits';
+  }
+    
 
   return (
-    
     <Container >
       <OpacityOverlay />
       <HeroContainer>
         <StyledHeader links={navLinks} />
-         <HeaderTitle>{'Your Florida'}<br></br>{'solar partners'}</HeaderTitle>
+        <HeaderTitle>{titleTop}<br></br>{titleBottom}</HeaderTitle>
       </HeroContainer>
      
       
