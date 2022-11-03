@@ -30,7 +30,7 @@ const Image = styled.div(props => [
   tw`rounded bg-cover bg-center h-80 sm:h-96 lg:h-144`
 ]);
 
-const ControlContainer = tw.div`absolute bottom-0 right-0 bg-gray-100 px-6 py-4 rounded-tl-3xl border`;
+const ControlContainer = tw.div`absolute bottom-0 left-0 bg-gray-100 px-6 py-4 rounded-tr-3xl border`;
 const ControlButton = styled(PrimaryButton)`
   ${tw`mx-3 rounded-full text-gray-100 p-2`}
   svg {
@@ -117,12 +117,12 @@ export default ({
                   <ImageAndControlContainer key={index}>
                     <Image imageSrc={testimonial.imageSrc} />
                     <ControlContainer>
-                      <ControlButton onClick={imageSliderRef?.slickPrev}>
+                      {/* <ControlButton onClick={imageSliderRef?.slickPrev}>
                         <ChevronLeftIcon />
                       </ControlButton>
                       <ControlButton onClick={imageSliderRef?.slickNext}>
                         <ChevronRightIcon />
-                      </ControlButton>
+                      </ControlButton> */}
                     </ControlContainer>
                   </ImageAndControlContainer>
                 ))}

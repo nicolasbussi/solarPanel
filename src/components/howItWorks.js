@@ -22,7 +22,7 @@ const Image = styled.div(props => [
   tw`bg-cover bg-center h-80 lg:h-64 rounded rounded-b-none`
 ]);
 
-const Details = tw.div`p-6 rounded rounded-t-none  flex-1 flex flex-col items-center text-center lg:block lg:text-left `;
+const Details = tw.div`pl-6 rounded rounded-t-none  flex-1 flex flex-col items-center text-center lg:block lg:text-left `;
 const MetaContainer = tw.div`flex items-center`;
 const Meta = styled.div`
   ${tw`text-secondary-100 font-medium text-sm flex items-center leading-none mr-6 last:mr-0`}
@@ -30,8 +30,11 @@ const Meta = styled.div`
     ${tw`w-4 h-4 mr-1`}
   }
 `;
-
-const Title = tw.h5`mt-4 leading-snug font-bold text-lg`;
+const ControlContainer = tw.div`bottom-0 left-0 bg-white py-4 rounded-tr-[5px] h-96 w-2/3`;
+const Title = styled.h5`${tw`mt-4 leading-snug font-bold text-2xl`}
+font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600`
 const Description = tw.p`mt-2 text-sm text-secondary-100`;
 const Link = styled(PrimaryButtonBase).attrs({as: "a"})`
   ${tw`inline-block mt-4 text-sm font-semibold`}
@@ -52,7 +55,7 @@ export default ({
     },
     {
       imageSrc: PowerOnImage,
-      title: "Powe On",
+      title: "Power On",
     }
   ];
   return (
@@ -67,10 +70,14 @@ export default ({
           {blogPosts.map((post, index) => (
             <Column key={index}>
               <Card>
-                <Image imageSrc={post.imageSrc} />
+                <Image imageSrc={post.imageSrc}>
+                <Container  style={{height: "220px"}}></Container>
+                <ControlContainer>
                 <Details>
                   <Title>{post.title}</Title>
-                </Details>
+                </Details> 
+                    </ControlContainer>
+                </Image>
               </Card>
             </Column>
           ))}

@@ -161,7 +161,7 @@ export default () => {
         </StatsHeadingContainer>
 
         <HowItWorks></HowItWorks>
-
+        <Container  style={{height: "100px"}}></Container>
         <LearnMoreAboutPricing />
 
        

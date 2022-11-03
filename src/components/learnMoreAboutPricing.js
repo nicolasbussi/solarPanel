@@ -16,11 +16,10 @@ const HeroContainer = tw.div`z-20 relative px-6 sm:px-8 mx-auto h-full flex flex
 const Content = tw.div`px-4 flex flex-1 flex-col justify-center items-center`;
 
 const Heading = styled.h1`
-  ${tw`text-3xl text-center sm:text-xl lg:text-4xl xl:text-4xl font-black text-gray-100 leading-snug -mt-24 sm:mt-0 pt-20`}
+  ${tw`text-3xl text-center sm:text-xl lg:text-4xl xl:text-4xl font-black text-gray-100 leading-snug -mt-24 sm:mt-0`}
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 600;
-  line-height: 1;
   span {
     ${tw`inline-block mt-2`}
   }
