@@ -4,7 +4,7 @@ import { css } from "styled-components/macro"; //eslint-disable-line
 import { SectionHeading, Subheading as SubheadingBase, SubheadingCustom } from "../components/misc/Headings.js";
 import { SectionDescription } from "../components/misc/Typography";
 import { Container as ContainerBase, ContentWithPaddingXl } from "../components/misc/Layouts";
-import HowItWorks from "components/blogs/ThreeColSimpleWithImageAndDashedBorder.js";
+import HowItWorks from "components/howItWorks.js";
 import styled from "styled-components";
 import StartSavingToday from "components/startSavingToday.js";
 import LearnMoreAboutPricing from "components/learnMoreAboutPricing.js";

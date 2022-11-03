@@ -14,6 +14,7 @@ const Header = tw.header`
   flex justify-between items-center
   max-w-screen-xl mx-auto
   p-10
+  mt-5
 `;
 
 export const NavLinks = tw.div`inline-block`;

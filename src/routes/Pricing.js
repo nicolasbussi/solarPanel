@@ -1,6 +1,6 @@
 import ContactUsForm from "components/forms/TwoColContactUsWithIllustration.js";
 import Hero from "components/hero/TwoColumnWithFeaturesAndTestimonial.js";
-const Contact = () => {
+const Pricing = () => {
 
 
   return (
@@ -10,4 +10,4 @@ const Contact = () => {
   )
 };
 
-export default Contact;
+export default Pricing;

@@ -3,11 +3,14 @@ import tw from "twin.macro";
 import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
 import { Subheading } from "./misc/Headings";
-import HeaderImage from "../images/headerBackground.svg";
+import StartSavingTodayBackground from "../images/startSavingTodayBackground.svg";
+
 import { PrimaryLink as PrimaryLink} from "components/headers/light.js";
+
 const Container = styled.div`
-  ${tw`relative -mx-8 -mt-8 bg-center bg-cover h-72 min-h-12 ml-32 mr-32 rounded-[20px] `}
-  background-image: url("${HeaderImage}");
+  ${tw`relative -mx-8 -mt-8 bg-center bg-cover h-72 min-h-12 ml-32 mr-32 rounded-[20px]`}
+  // background-image: url("https://images.unsplash.com/photo-1579546929662-711aa81148cf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
+background-image: url("${StartSavingTodayBackground}")
 `;
 const ButtonDiv = styled.div`${tw`pl-10 lg:pl-35 xl:pl-35 2xl:pl-35 md:pl-10 sm:pl-10 pt-10 items-center px-28`}`;
 const HeroContainer = tw.div`z-20 relative px-6 sm:px-8 mx-auto h-full flex flex-col`;

@@ -3,6 +3,8 @@ import tw from "twin.macro";
 import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import PricingHeaderImage from "../../images/pricingHeaderImage.svg";
+import AboutUsHeaderImage from "../../images/aboutUsHeaderImage.svg";
 import HeaderImage from "../../images/headerBackground.svg";
 import Header, { NavLink, NavLinks, PrimaryLink as PrimaryLinkBase, LogoLink, NavToggle, DesktopNavLinks } from "../headers/light.js";
 
@@ -23,10 +25,25 @@ font-weight: 700;
 line-height: 1;
 `;
 
+var HeaderImageToUse = '';
+
+if(window.location.pathname === '/'){
+  HeaderImageToUse = HeaderImage;
+
+} else if (window.location.pathname === '/about-us'){
+  HeaderImageToUse = AboutUsHeaderImage;
+
+} else if (window.location.pathname === '/pricing'){
+  HeaderImageToUse = PricingHeaderImage;
+
+}
+  
+
+
 const PrimaryLink = tw(PrimaryLinkBase)`rounded-full`
 const Container = styled.div`
   ${tw`relative -mx-8 -mt-8  bg-center bg-cover h-96 min-h-12`}
-  background-image: url("${HeaderImage}")
+  background-image: url("${HeaderImageToUse}")
 `;
 
 const OpacityOverlay = tw.div`z-10 absolute inset-0`;
@@ -48,14 +65,11 @@ export default () => {
   
   const navLinks = [
     <NavLinks key={1}>
+       <NavLink href="/">
+        Home
+      </NavLink>
       <NavLink href="/about-us">
         About Us
-      </NavLink>
-      <NavLink href="/benefits">
-        Benefits
-      </NavLink>
-      <NavLink href="/how-it-works">
-        How it works
       </NavLink>
       <NavLink href="/pricing">
         Pricing
@@ -79,21 +93,10 @@ export default () => {
     titleTop = 'About';
     titleBottom = 'Us';
 
-  } else if (window.location.pathname === '/how-it-works'){
-      titleTop = 'How it';
-      titleBottom = 'Works';
-      
-    
   } else if (window.location.pathname === '/pricing'){
     titleTop = 'Convenient';
     titleBottom = 'Pricing';
   }
-
-  else if (window.location.pathname === '/benefits'){
-    titleTop = 'Solar Panel';
-    titleBottom = 'Benefits';
-  }
-    
 
   return (
     <Container >
@@ -102,8 +105,6 @@ export default () => {
         <StyledHeader links={navLinks} />
         <HeaderTitle>{titleTop}<br></br>{titleBottom}</HeaderTitle>
       </HeroContainer>
-     
-      
     </Container>
   );
 };
