@@ -15,7 +15,7 @@ const Row = tw.div`flex flex-col md:flex-row justify-between items-center`;
 const Column = tw.div`w-full max-w-md mx-auto md:max-w-none md:mx-0`;
 const ImageColumn = tw(Column)`md:w-5/12 xl:w-6/12 flex-shrink-0 relative`;
 const TextColumn = styled(Column)(props => [
-  tw`md:w-7/12 xl:w-6/12 mt-16 md:mt-0`,
+  tw`md:w-7/12 xl:w-6/12 mt-16 md:mt-0 `,
   props.textOnLeft ? tw`md:pr-12 lg:pr-16 md:order-first` : tw`md:pl-12 lg:pl-16 md:order-last`
 ]);
 
@@ -73,9 +73,9 @@ export default ({
   imageRounded = true,
   imageBorder = false,
   imageShadow = false,
-  subheading = "Testimonials",
-  heading = "Our Clients Love Us.",
-  description = "What people say about Solar Energy with Innovation",
+  subheading = "",
+  heading = "Thousands of Happy Clients",
+  description = "We have been helping Floridians save on their bill for over 20+ years",
   textOnLeft = false,
   testimonials = [
     {
@@ -104,11 +104,7 @@ export default ({
 
   return (
     <Container>
-      <ContentWithPaddingXl>
-        <Row>
-          <ImageColumn>
-            <Image src={imageSrc} imageBorder={imageBorder} imageShadow={imageShadow} imageRounded={imageRounded} />
-          </ImageColumn>
+       <Container  style={{height: "100px"}}></Container>
           <TextColumn textOnLeft={textOnLeft}>
             <Subheading>{subheading}</Subheading>
             <Heading>{heading}</Heading>
@@ -116,19 +112,14 @@ export default ({
             <TestimonialSlider arrows={false} ref={setSliderRef}>
               {testimonials.map((testimonial, index) => (
                 <Testimonial key={index}>
-                  <StarsContainer>
-                    {Array.from({ length: testimonial.stars }).map((_,indexIcon) => (
-                      <StarIcon key={indexIcon} />
-                    ))}
-                  </StarsContainer>
+                  <CustomerProfilePicture src={testimonial.profileImageSrc} alt={testimonial.customerName} />
                   <TestimonialHeading>{testimonial.heading}</TestimonialHeading>
                   <Quote>{testimonial.quote}</Quote>
                   <CustomerInfoAndControlsContainer>
                     <CustomerInfo>
-                      <CustomerProfilePicture src={testimonial.profileImageSrc} alt={testimonial.customerName} />
+                      
                       <CustomerTextInfo>
                         <CustomerName>{testimonial.customerName}</CustomerName>
-                        <CustomerTitle>{testimonial.customerTitle}</CustomerTitle>
                       </CustomerTextInfo>
                     </CustomerInfo>
                     <Controls>
@@ -144,9 +135,8 @@ export default ({
                 </Testimonial>
               ))}
             </TestimonialSlider>
-          </TextColumn>
-        </Row>
-      </ContentWithPaddingXl>
-    </Container>
+          </TextColumn> 
+          <Container  style={{height: "100px"}}></Container>
+          </Container>
   );
 };

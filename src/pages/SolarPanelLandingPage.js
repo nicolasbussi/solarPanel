@@ -12,16 +12,21 @@ import { PrimaryLink as PrimaryLink} from "components/headers/light.js";
 import FirstBlockHomeImage from  "../images/firstBlockHomeImage.png";
 import SecondBlockHomeImage from  "../images/secondBlockHomeImage.png";
 import ThirdBlockHomeImage from  "../images/thirdBlockHomeImage.png";
+import TwoColumnWithImageAndProfilePictureReview from "components/testimonials/TwoColumnWithImageAndRating.js";
 
 export default () => {
   // const Subheading = tw.span`uppercase tracking-widest font-bold text-primary-500`;
   const HighlightedText = tw.span`text-primary-500`;
-  const Heading = tw(SectionHeading)`w-full text-white`;
+  const Heading = styled.h2`${tw` text-white text-2xl sm:text-2xl tracking-wide text-center px-10 lg:px-56 xl:px-56 2xl:px-56 md:px-10 sm:px-10 pt-35`}
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600`;
+
   const Description = styled.h3`${tw`tracking-wide text-description-color pl-10 lg:pl-35 xl:pl-35 2xl:pl-35 md:pl-10 sm:pl-10`}
   font-family: 'Inter';
   font-style: normal;
   font-weight: 400`;
-  const ButtonDiv = styled.div`${tw`pl-10 lg:pl-35 xl:pl-35 2xl:pl-35 md:pl-10 sm:pl-10 pt-10`}`;
+  const ButtonDiv = styled.div`${tw`pl-10 lg:pl-35 xl:pl-35 2xl:pl-35 md:pl-10 sm:pl-10 pt-10  `}`;
   const cardDescription = tw(SectionDescription)`mx-auto`;
   const Subheading= tw(SubheadingCustom)`mx-auto`;
   const cards = [
@@ -62,7 +67,7 @@ export default () => {
   ]);
   const Image = styled.div(props => [
     `background-image: url("${props.imageSrc}");`,
-    tw`rounded md:w-1/3 lg:w-1/2 xl:w-1/3 flex-shrink-0 h-80 md:h-80 bg-cover bg-center mx-4 sm:mx-8 md:mx-4 lg:mx-8`
+    tw`rounded-[20px] md:w-1/3 lg:w-1/2 xl:w-1/2 flex-shrink-0 h-80 md:h-80 bg-cover bg-center mx-4 sm:mx-8 md:mx-4 lg:mx-8`
   ]);
   const Details = tw.div`mt-4 md:mt-0 md:max-w-md mx-4 sm:mx-8 md:mx-4 lg:mx-8`;
   const Subtitle = styled.h3`${tw`tracking-wide text-primary-100`}
@@ -79,15 +84,19 @@ export default () => {
 
 
   const StatsContainerBase = tw(ContainerBase)`my-8 lg:my-10 bg-red-900 text-gray-100 -mx-8 px-8`;
-  const StatsHeadingContainer = tw.div`bg-purple-900`;
+  const StatsHeadingContainer = tw.div`bg-cta-color`;
   const StatsHeading = tw(SectionHeading)`sm:text-3xl md:text-4xl lg:text-5xl`;
   const StatsSubheading = tw(SubheadingBase)`text-gray-100 text-center`;
   const StatsDescription = tw(SectionDescription)`text-gray-400 text-center mx-auto max-w-screen-md`;
 
   const Container = tw.div`mt-8 flex flex-col sm:flex-row items-center justify-center flex-wrap max-w-screen-md justify-between mx-auto`
-  const Stat = tw.div`flex flex-col text-center p-4 tracking-wide`
-  const StatKey = tw.div`text-xl font-medium text-white`
-  const StatValue = tw.div`text-4xl sm:text-3xl md:text-4xl lg:text-5xl text-white`
+  const Stat = tw.div`flex flex-col text-left p-4 tracking-wide`
+  const StatKey = styled.div`${tw`text-xl font-medium text-white`}font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600`
+  const StatValue = styled.div`${tw`text-4xl sm:text-3xl md:text-4xl lg:text-5xl text-white`} font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400`
 
 
   const subheadingStatsText = "";
@@ -117,7 +126,7 @@ export default () => {
     
     <Description>Replace your power coming from the grid with solar<br></br> generated power today</Description>
     <ButtonDiv>
-    <PrimaryLink css={tw`rounded-full bg-cta-color `}href="/#">Schedule Free Call</PrimaryLink>
+    <PrimaryLink css={tw`rounded-full bg-cta-color`}href="/#">Schedule Free Call</PrimaryLink>
     </ButtonDiv>
 
     <Content>
@@ -144,17 +153,21 @@ export default () => {
               <StatValue>{stat.value}</StatValue>
               <StatKey>{stat.key}</StatKey>
             </Stat>
+            
           ))}
+          
         </Container>
+        <Container  style={{height: "100px"}}></Container>
         </StatsHeadingContainer>
 
         <HowItWorks></HowItWorks>
 
         <LearnMoreAboutPricing />
 
-        <Container  style={{height: "100px"}}></Container>
-
+       
+<TwoColumnWithImageAndProfilePictureReview />
         <StartSavingToday />
+        <Container  style={{height: "100px"}}></Container>
     </>
   );
 }

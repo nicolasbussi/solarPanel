@@ -3,22 +3,29 @@ import tw from "twin.macro";
 import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
 import { Subheading } from "./misc/Headings";
+import { PrimaryLink as PrimaryLink} from "components/headers/light.js";
 
 const Container = styled.div`
   ${tw`relative -mx-8 -mt-8 bg-center bg-cover h-80 min-h-12 `}
   background-image: url("https://images.unsplash.com/photo-1579547945413-497e1b99dac0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
 `;
-
+const ButtonDiv = styled.div`${tw`pl-10 lg:pl-35 xl:pl-35 2xl:pl-35 md:pl-10 sm:pl-10 pt-10 items-center px-28`}`;
 const HeroContainer = tw.div`z-20 relative px-6 sm:px-8 mx-auto h-full flex flex-col`;
 const Content = tw.div`px-4 flex flex-1 flex-col justify-center items-center`;
 
 const Heading = styled.h1`
-  ${tw`text-3xl text-center sm:text-xl lg:text-4xl xl:text-4xl font-black text-gray-100 leading-snug -mt-24 sm:mt-0`}
+  ${tw`text-3xl text-center sm:text-xl lg:text-4xl xl:text-4xl font-black text-gray-100 leading-snug -mt-24 sm:mt-0 pt-20`}
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1;
   span {
     ${tw`inline-block mt-2`}
   }
 `;
-const SubHeading = tw.h2`text-gray-100 text-center sm:text-xl lg:text-3xl xl:text-3xl`;
+const SubHeading = styled.h2`${tw`text-gray-100 text-center sm:text-xl lg:text-2xl xl:text-2xl px-28 pt-10`} font-family: 'Poppins';
+font-style: normal;
+font-weight: 600;`;
 
 export default () => {
  
@@ -29,7 +36,11 @@ export default () => {
       <Heading>Stop rentinig power. Start producing it.</Heading>
       <SubHeading>Save up to 100% on your bill. Swap your current eletric bill with solar financing to avoid any cost whatsoever and to save money in the future</SubHeading>
         {/* <StyledHeader links={navLinks} /> */}
+        <ButtonDiv>
+        <PrimaryLink css={tw`rounded-full bg-cta-color`}href="/#">Learn more about pricing</PrimaryLink>
+        </ButtonDiv>
       </HeroContainer>
+     
     </Container>
   );
 };
