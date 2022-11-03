@@ -12,12 +12,12 @@ const Container = styled.div`
   // background-image: url("https://images.unsplash.com/photo-1579546929662-711aa81148cf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
 background-image: url("${StartSavingTodayBackground}")
 `;
-const ButtonDiv = styled.div`${tw`pl-10 lg:pl-35 xl:pl-35 2xl:pl-35 md:pl-10 sm:pl-10 pt-10 items-center px-28`}`;
+const ButtonDiv = styled.div`${tw` pt-10 items-center px-28 xxs:px-1 xs:px-1 lg:px-28  xl:px-28 md:px-8 sm:px-8`}`;
 const HeroContainer = tw.div`z-20 relative px-6 sm:px-8 mx-auto h-full flex flex-col`;
 const Content = tw.div`px-4 flex flex-1 flex-col justify-center items-center`;
 
 const Heading = styled.h1`
-  ${tw`text-3xl text-center sm:text-xl lg:text-3xl xl:text-4xl font-black text-gray-100 leading-snug -mt-24 sm:mt-0 pt-10`}
+  ${tw`text-3xl text-center text-xl  xxs:text-base xs:text-base lg:text-4xl xl:text-4xl 2xl:text-4xl md:text-xl sm:text-xl font-black text-gray-100 leading-snug -mt-24 sm:mt-0 px-28 xxs:px-1 xs:px-1 lg:px-28 xl:px-28 md:px-8 pt-8 sm:pt-32 xxs:pt-32 xs:pt-32 lg:pt-8 xl:pt-8 md:pt-8 sm:pt-8`}
   span {
     ${tw`inline-block mt-2`}
   }
@@ -26,7 +26,7 @@ font-style: normal;
 font-weight: 600;
 line-height: 1;
 `;
-const SubHeading = styled.h2`${tw`text-gray-100 text-center pt-8 px-28`}  
+const SubHeading = styled.h2`${tw`text-gray-100 text-center text-xl  xxs:text-base xs:text-base lg:text-base xl:text-xl 2xl:text-xl md:text-xl sm:text-xl pt-8 px-28 xxs:px-1 xs:px-1 lg:px-28  xl:px-28 md:px-8 sm:px-8`}  
 font-family: 'Inter';
 font-weight: 400
 `;

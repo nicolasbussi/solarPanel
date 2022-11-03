@@ -29,6 +29,7 @@ export const NavLink = tw.a`
 export const PrimaryLink = tw(NavLink)`
   lg:mx-0
   px-8 py-3 rounded bg-primary-500 text-gray-100
+  text-xl  xxs:text-base xs:text-base lg:text-base xl:text-xl 2xl:text-xl md:text-xl sm:text-base
   hocus:bg-primary-700 hocus:text-gray-200 focus:shadow-outline
   border-b-0
 `;
